@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sonoff-list', {
+        category: 'home automation',
+        color: '#A6BBCF',
+        defaults: {
+            name: { value: "" },
+            server: { value: "", type: "sonoff-server" },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "bridge-dash.png",
+        label: function () {
+            return this.name || "sonoff-list";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="sonoff-list">
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-dot-circle-o"></i> Server</label>
+        <input type="text" id="node-input-server" />
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="sonoff-list">
+    <p>List devices connected to server.</p>
+</script>

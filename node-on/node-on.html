@@ -1,0 +1,45 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sonoff-on', {
+        category: 'home automation',
+        color: '#A6BBCF',
+        defaults: {
+            name: { value: "" },
+            device_id: { value: "", required: true },
+            server: { value: "", type: "sonoff-server" },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "bridge-dash.png",
+        label: function () {
+            return this.name || "sonoff-on: " + this.device_id;;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="sonoff-on">
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-dot-circle-o"></i> Server</label>
+        <input type="text" id="node-input-server" />
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-device_id"><i class="icon-tag"></i> Device ID</label>
+        <input type="text" id="node-input-device_id" placeholder="Device ID">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="sonoff-on">
+    <p>Turn on device connected to server.</p>
+    
+    <h3>Outputs</h3>
+    
+    <dl class="message-properties">
+        <dt>topic<span class="property-type">string</span></dt>
+        <dd>Device ID</dd>
+
+        <dt>payload<span class="property-type">string</span></dt>
+        <dd>"on" if succes, "disconnected" if device is not connected</dd>
+</script>
