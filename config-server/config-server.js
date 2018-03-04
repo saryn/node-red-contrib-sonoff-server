@@ -8,7 +8,6 @@ module.exports = function (RED) {
         const serverConfig = {
             server: {
                 IP: config.serverIP,
-                httpPort: parseInt(config.httpPort),
                 httpsPort: parseInt(config.httpsPort),
                 websocketPort: parseInt(config.websocketPort)
             },

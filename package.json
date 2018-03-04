@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-sonoff-server",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Wrapper for simple-sonoff-server to be runnable in Node-RED",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,9 @@
   ],
   "author": "saryn",
   "license": "ISC",
+  "repository": "github:saryn/node-red-contrib-sonoff-server",
   "dependencies": {
-    "simple-sonoff-server": "^1.1.0"
+    "simple-sonoff-server": "^2.0.0"
   },
   "node-red": {
     "nodes": {

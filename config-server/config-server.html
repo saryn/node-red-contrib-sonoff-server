@@ -4,13 +4,11 @@
         category: 'config',
         defaults: {
             serverIP: { value: "0.0.0.0", required: true, validate: RED.validators.regex(ipAddressRegEx) },
-            httpPort: { value: 1081, required: true, validate: RED.validators.number() },
             httpsPort: { value: 1080, required: true, validate: RED.validators.number() },
             websocketPort: { value: 443, required: true, validate: RED.validators.number() }
         },
         label: function () {
-            return this.name || "sonoff-server@" +
-                this.httpPort + "|" + this.httpsPort + "|" + this.websocketPort;
+            return this.name || "sonoff-server@" + this.httpsPort + "|" + this.websocketPort;
         }
     });
 </script>
@@ -23,10 +21,6 @@
     <div class="form-row">
         <label for="node-config-input-serverIP"><i class="icon-bookmark"></i> Server IP</label>
         <input type="text" id="node-config-input-serverIP">
-    </div>
-    <div class="form-row">
-        <label for="node-config-input-httpPort"><i class="icon-bookmark"></i> HTTP port</label>
-        <input type="text" id="node-config-input-httpPort">
     </div>
     <div class="form-row">
         <label for="node-config-input-httpsPort"><i class="icon-bookmark"></i> HTTPS port</label>
