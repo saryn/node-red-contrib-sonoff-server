@@ -7,7 +7,7 @@ Various nodes to run sonoff server and control your devices using [Node-RED](htt
 This assumes you have [Node-RED](http://nodered.org/) already installed and working.
 If you need to install Node-RED see [installation guide](http://nodered.org/docs/getting-started/installation).
 ```shell
-$ cd cd ~/.node-red
+$ cd ~/.node-red
 $ npm install node-red-contrib-sonoff-server
 $ node-red-stop && node-red-start
 ```
